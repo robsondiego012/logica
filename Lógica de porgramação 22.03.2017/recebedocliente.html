@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+		
+		</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var Gasolina = parseFloat(prompt("Qual o preço do litro Gasolina? "));// var gasolina = 3.90;
+			var Etanol = parseFloat(prompt("Qual o preço do litro Etanol? "));//parseFloat(prompt()) Aparece uma caixa de texto para o usuário;
+			var tamanhoTanque = parseFloat(prompt("Qual o tamanho do tanque em litros? "));
+			var valorTotalGasolina = Gasolina * tamanhoTanque;
+			var valorTotalEtanol = Etanol * tamanhoTanque;
+			var economizaTotalGasolina = valorTotalGasolina - valorTotalEtanol;
+			var economizaTotalEtanol = valorTotalEtanol - valorTotalGasolina;
+			console.log(valorTotalEtanol);//Aparece na inspeção da pagina o resultado da variavel;
+			console.log(valorTotalGasolina);
+			document.write("O valor com gasolina é: " + valorTotalGasolina.toFixed(2));//.toFixed(2); Faz aparecer os valores em duas casas decimais;
+			document.write("<br>O valor com Etanol é:" + valorTotalEtanol.toFixed(2));
+			document.write("<br>"); 
+
+
+
+			if(valorTotalGasolina < valorTotalEtanol){
+				document.write("A gasolina compensa, você economizará R$" + economizaTotalGasolina);
+
+			}
+
+			if(valorTotalGasolina == valorTotalEtanol){
+				document.write("Os valores são iguais");
+			}
+
+			else{
+				document.write("O Etanol compensa, você economizará R$" + economizaTotalEtanol);
+			}
+			/*
+			if (condicao) 
+				{
+					instrucao = document.write();
+				}
+				 else {
+
+				 }
+			*/
+
+		</script>
+	</body>
+</html>
